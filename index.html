@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
+<h1>
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+</h1>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box}
@@ -74,7 +75,6 @@ button:hover {
 }
 </style>
 <body>
-
 <!--  ----------------------------------------------------------------------  -->
 <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
 <!--  If necessary, please modify the charset parameter to specify the        -->
@@ -82,14 +82,15 @@ button:hover {
 <!--  ----------------------------------------------------------------------  -->
 
 
+
 <!--  ----------------------------------------------------------------------  -->
 <!--  NOTE: Please add the following <FORM> element to your page.             -->
 <!--  ----------------------------------------------------------------------  -->
 
-<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
 
-<input type=hidden name="oid" value="00D8Z000000srWr">
-<input type=hidden name="retURL" value="http://">
+<input type=hidden name="orgid" value="00D8Z000000srWr">
+<input type=hidden name="retURL" value="https://www.canva.com/design/DAFIE7WI2yU/tq64vJ8bjZRBBTPrPx0A-g/watch?utm_content=DAFIE7WI2yU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">
 
 <!--  ----------------------------------------------------------------------  -->
 <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
@@ -99,25 +100,29 @@ button:hover {
 <!--  value="jansaya.mauyei@gmail.com">                                       -->
 <!--  ----------------------------------------------------------------------  -->
 
-<label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
-
-<label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+<label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
 
 <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
 
-<label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
+<label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
 
-<label for="state">State/Province</label><input  id="state" maxlength="20" name="state" size="20" type="text" /><br>
+<label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
 
-<label for="zip">Zip</label><input  id="zip" maxlength="20" name="zip" size="20" type="text" /><br>
+<label for="description">Description</label><textarea name="description"></textarea><br>
 
-<label for="country">Country</label><input  id="country" maxlength="40" name="country" size="20" type="text" /><br>
-
-<label for="lead_source">Lead Source</label><select  id="lead_source" name="lead_source"><option value="">--None--</option><option value="Web">Web</option>
-<option value="Phone Inquiry">Phone Inquiry</option>
-<option value="Partner Referral">Partner Referral</option>
-<option value="Purchased List">Purchased List</option>
+<label for="reason">Case Reason</label><select  id="reason" name="reason"><option value="">--None--</option><option value="Installation">Installation</option>
+<option value="Equipment Complexity">Equipment Complexity</option>
+<option value="Performance">Performance</option>
+<option value="Breakdown">Breakdown</option>
+<option value="Equipment Design">Equipment Design</option>
+<option value="Feedback">Feedback</option>
 <option value="Other">Other</option>
+</select><br>
+
+<label for="status">Status</label><select  id="status" name="status"><option value="">--None--</option><option value="New">New</option>
+<option value="Working">Working</option>
+<option value="Escalated">Escalated</option>
+<option value="Closed">Closed</option>
 </select><br>
 
 <input type="submit" name="submit">
